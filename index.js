@@ -1,8 +1,30 @@
+// Updated for O(n) runtime
+
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const previousVals = {};
+  for(number of array) {
+    const checkSum = target - number;
+    console.log(previousVals)
+    if(checkSum in previousVals) return true;
+    previousVals[number] = true;
+  }
+  return false;
 }
 
+
+// Bad runtime O(n^2) double for loop
+
+// function hasTargetSum(array, target) {
+//   for(let i = 0; i < array.length; i++) {
+//     const checkSum = target - array[i];
+//     for(let j = i + 1; j < array.length; j++) {
+//       if(array[j] === checkSum) return true;
+//     }
+//   }return false
+// }
 /* 
+
+
   Write the Big O time complexity of your function here
 */
 
